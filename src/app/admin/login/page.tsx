@@ -97,11 +97,6 @@ export default function LoginPage() {
                 {isLoading ? 'ログイン中...' : 'ログイン'}
               </Button>
             </form>
-
-            <div className="mt-6 text-sm text-ios-gray-500">
-              <p>利用可能なアカウント:</p>
-              <p>ユーザー名: yumanoie / パスワード: 19930322</p>
-            </div>
           </CardContent>
         </Card>
       </div>
