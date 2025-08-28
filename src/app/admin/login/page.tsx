@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
-import { Button } from '@/components/ui/Button';
 import { useAuth } from '@/contexts/AuthContext';
 
 export default function LoginPage() {
@@ -89,20 +88,14 @@ export default function LoginPage() {
                 </div>
               )}
 
-              <Button
+              <button
                 type="submit"
-                fullWidth
                 disabled={isLoading}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'ログイン中...' : 'ログイン'}
-              </Button>
+              </button>
             </form>
-
-            <div className="mt-6 text-sm text-ios-gray-500">
-              <p>テスト用アカウント:</p>
-              <p>ユーザー名: admin1 / パスワード: password123</p>
-              <p>ユーザー名: admin2 / パスワード: password123</p>
-            </div>
           </CardContent>
         </Card>
       </div>

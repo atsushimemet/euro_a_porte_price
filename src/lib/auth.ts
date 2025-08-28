@@ -17,6 +17,11 @@ const ADMIN_ACCOUNTS = [
     username: 'admin2',
     passwordHash: '$2a$10$N9qo8uLOickgx2ZMRZoMye3jQO8w2pP2.SBJ7gRGJD0lqLOqQm5ku', // 'password123'
   },
+  {
+    id: 3,
+    username: 'yumanoie',
+    passwordHash: '$2b$10$ODdULcwrOAjIcTzHlDhgwuPJi8xECuNtjmHtFkrKlVX2nyEsFzxea', // '19930322'
+  },
 ];
 
 export interface AdminUser {
