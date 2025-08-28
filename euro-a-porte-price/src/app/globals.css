@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c1c1e;
+  --ios-blue: #007aff;
+  --ios-gray-50: #f2f2f7;
+  --ios-gray-100: #e5e5ea;
+  --ios-gray-200: #c7c7cc;
+  --ios-gray-300: #aeaeb2;
+  --ios-gray-400: #8e8e93;
+  --ios-gray-500: #636366;
+  --ios-gray-600: #48484a;
+  --ios-gray-700: #3a3a3c;
+  --ios-gray-800: #2c2c2e;
+  --ios-gray-900: #1c1c1e;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* iOS風のタッチフィードバック */
+.touch-feedback {
+  transition: all 0.1s ease;
+}
+
+.touch-feedback:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+/* カスタムスクロールバー */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ios-gray-300);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--ios-gray-600);
+}
+
+/* Large Titleスタイル */
+.large-title {
+  font-size: 2.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+/* セクションヘッダー */
+.section-header {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ios-gray-500);
+}
+
+/* カードスタイル */
+.ios-card {
+  background: var(--background);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--ios-gray-100);
+}
+
+.dark .ios-card {
+  background: var(--ios-gray-800);
+  border-color: var(--ios-gray-700);
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+}
