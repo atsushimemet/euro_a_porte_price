@@ -4,7 +4,7 @@ import { ClientWrapper } from "@/components/ClientWrapper";
 
 export const metadata: Metadata = {
   title: "Euro a porte Price",
-  description: "ユーロヴィンテージの年代別相場を直感的に確認できるサイト",
+  description: "ユーロヴィンテージの相場を知りましょう",
   keywords: ["ヴィンテージ", "モールスキン", "フランス", "価格", "相場"],
 };
 

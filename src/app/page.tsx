@@ -10,8 +10,7 @@ export default function Home() {
             Euro a porte Price
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            ユーロヴィンテージの年代別相場を直感的に確認できるサイト。
-            価格は管理者が円で手動入稿し、iOSアプリ風デザインで検索・表示します。
+            ユーロヴィンテージの相場を知りましょう
           </p>
           <Link href="/search">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">

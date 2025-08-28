@@ -1,7 +1,7 @@
 {
   "name": "euro-a-porte-price",
   "version": "0.1.0",
-  "description": "ユーロヴィンテージの年代別相場を直感的に確認できるサイト",
+  "description": "ユーロヴィンテージの相場を知りましょう",
   "keywords": ["vintage", "price", "moleskin", "france", "europe"],
   "private": true,
   "scripts": {
