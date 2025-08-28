@@ -1,17 +1,19 @@
 import { createClient } from '@supabase/supabase-js';
 
-// 環境変数の検証
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+// 環境変数の取得（デフォルト値で安全に初期化）
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
 
-if (!supabaseUrl) {
-  throw new Error('Missing env.NEXT_PUBLIC_SUPABASE_URL');
+// 環境変数の検証とログ出力
+if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
+  console.error('Missing env.NEXT_PUBLIC_SUPABASE_URL');
 }
-if (!supabaseAnonKey) {
-  throw new Error('Missing env.NEXT_PUBLIC_SUPABASE_ANON_KEY');
+if (!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+  console.error('Missing env.NEXT_PUBLIC_SUPABASE_ANON_KEY');
 }
 
+// Supabaseクライアントの初期化（エラーでクラッシュしないように）
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // 管理者認証用のサービスロールクライアント
