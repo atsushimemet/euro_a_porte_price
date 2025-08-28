@@ -111,11 +111,13 @@ export default function Home() {
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               価格データの入稿・編集はこちらから
             </p>
-            <Link href="/admin/login">
-              <button className="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-6 rounded-lg transition duration-200 text-sm">
-                🔐 管理者ログイン
-              </button>
-            </Link>
+            <div className="mb-8">
+              <Link href="/admin/login">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                  🔐 管理者ログイン
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </main>
