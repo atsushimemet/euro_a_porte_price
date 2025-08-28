@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AuthProvider } from "@/contexts/AuthContext";
+import { ClientWrapper } from "@/components/ClientWrapper";
 
 export const metadata: Metadata = {
   title: "Euro a porte Price",
@@ -21,10 +21,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="format-detection" content="telephone=no" />
       </head>
-      <body className="font-sf-pro antialiased">
-        <AuthProvider>
+      <body className="font-sans antialiased">
+        <ClientWrapper>
           {children}
-        </AuthProvider>
+        </ClientWrapper>
       </body>
     </html>
   );
