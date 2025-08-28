@@ -138,10 +138,26 @@ npx vercel
 ```
 
 ### 環境変数の設定
-本番環境では適切なセキュリティ設定を行ってください：
-- 強力なJWTシークレット
-- 安全な管理者パスワード
-- 本番用Supabase設定
+Vercelでの本番環境では、以下の環境変数を設定してください：
+
+**必須の環境変数:**
+```
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_KEY=your_supabase_service_role_key
+ADMIN_JWT_SECRET=your_jwt_secret_key_here
+```
+
+**Vercelでの設定方法:**
+1. Vercelダッシュボードでプロジェクトを選択
+2. Settings → Environment Variables
+3. 上記の環境変数を追加
+4. デプロイを再実行
+
+**404エラーの場合:**
+- 環境変数が正しく設定されているか確認
+- Supabaseプロジェクトが有効か確認
+- ビルドログでエラーがないか確認
 
 ## ライセンス
 
