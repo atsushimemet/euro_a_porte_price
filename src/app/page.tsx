@@ -103,6 +103,21 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* 管理者向け */}
+        <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+          <div className="text-center">
+            <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">価格情報管理</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
+              価格データの入稿・編集はこちらから
+            </p>
+            <Link href="/admin/login">
+              <button className="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-6 rounded-lg transition duration-200 text-sm">
+                🔐 管理者ログイン
+              </button>
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );
